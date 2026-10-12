@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hard-site — realtime spreadsheet</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">▦ hard-site</div>
+  <div class="doc">doc: <strong id="docName">default</strong></div>
+  <div class="me">
+    <span class="dot" id="myDot"></span>
+    <input id="nameInput" maxlength="20" spellcheck="false" title="Your display name">
+  </div>
+  <div class="users" id="userList" title="Online"></div>
+  <div class="conn"><span class="conn-dot" id="connDot"></span><span id="connText">connecting…</span></div>
+</header>
+<div class="formulabar">
+  <div class="fx" id="selLabel">A1</div>
+  <div class="fx-symbol">fx</div>
+  <input id="formulaInput" spellcheck="false" autocomplete="off" placeholder="type a value or =formula, Enter to commit">
+</div>
+<div class="grid-wrap" id="gridWrap" tabindex="0">
+  <table id="grid" cellspacing="0" cellpadding="0"></table>
+</div>
+<footer class="statusbar">
+  <span id="statusText">ready</span>
+  <span class="hint">Enter: edit/commit · Esc: cancel · arrows: move · Ctrl+Z / Ctrl+Y: undo/redo</span>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
